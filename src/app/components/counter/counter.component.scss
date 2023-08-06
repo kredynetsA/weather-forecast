@@ -1,0 +1,49 @@
+.counter {
+  width: 100%;
+  background: blue;
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 31%;
+  }
+}
+
+.login-btn {
+  position: absolute;
+  right: 30px;
+  border: none;
+  background: transparent;
+  &_img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.content {
+  color: #efefef;
+  font-size: 30px;
+  text-align: center;
+  &_title {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_title-temp {
+
+  }
+  &_title-city {
+    margin-top: 30px;
+  }
+
+  &_img {
+    width: 15%;
+    margin-right: 10px;
+  }
+}
+
+

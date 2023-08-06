@@ -1,0 +1,10 @@
+<div class="card">
+  <img class="card_img" src="https://www.berlin.de/binaries/asset/image_assets/8215661/ratio_4_3/1686824224/800x600/" alt="">
+  <div class="card_desc">
+    <h3 class="card_title">{{cityData.address}}</h3>
+    <p class="card_sub-text">
+      {{cityData.days[0].datetime | date: "dd/MM/yyyy"}}
+      -
+      {{cityData.days[cityData.days.length - 1].datetime | date: "dd/MM/yyyy"}}</p>
+  </div>
+</div>

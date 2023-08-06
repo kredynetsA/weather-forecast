@@ -1,0 +1,6 @@
+<div class="day-card">
+  <span class="day-card_title-day">{{dayData.datetime | date:'EEEE'}}</span>
+  <p class="day-card_title day-card_title__date">{{dayData.datetime | date:'dd/MM'}}</p>
+  <app-img class="day-card_img" [icon]="dayData.icon"></app-img>
+  <p class="day-card_desc">{{dayData.tempmax}} <span>&deg;</span>/ {{dayData.tempmin}}<span>&deg;</span></p>
+</div>

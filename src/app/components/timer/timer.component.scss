@@ -1,0 +1,19 @@
+.timer {
+  color: #efefef;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  &_item {
+    margin: 20px;
+    text-align: center;
+  }
+  &_item-title {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+  }
+  &_item-text {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}

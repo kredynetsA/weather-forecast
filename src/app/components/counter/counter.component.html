@@ -1,0 +1,15 @@
+<button class="login-btn">
+  <img class="login-btn_img" src="assets/img/walrus.png" alt="">
+</button>
+<div class="counter_container">
+  <div class="content">
+    <h3 class="content_title">{{weatherData?.datetime | date: 'EEEE'}}</h3>
+    <div class="content_container">
+      <app-img class="content_img" *ngIf="weatherData?.icon" [icon]="weatherData?.icon" ></app-img>
+      <span class="content_title-temp">{{weatherData?.tempmax}} <span>&deg;</span></span>
+    </div>
+    <p class="content_title-city">{{data.address}}</p>
+  </div>
+</div>
+
+<app-timer [date]="data.days[0].datetime"></app-timer>

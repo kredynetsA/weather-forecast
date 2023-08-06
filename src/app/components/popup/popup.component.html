@@ -1,0 +1,51 @@
+<div class="popup_container">
+  <div class="popup">
+    <div class="popup_header">
+      <p class="popup_header-title">Create trip</p>
+      <button (click)="cancel()"
+        class="popup_header-btn material-symbols-outlined">
+        close
+      </button>
+    </div>
+
+    <form [formGroup]="form" class="popup_content">
+<!--      ///select-->
+      <div class="input_form-field">
+        <p class="input_label">City</p>
+        <select class="input input__select"
+                (change)="changeCity($event)"
+                formControlName="city"
+                required>
+          <option *ngFor="let city of cities" [ngValue]="city">{{city}}</option>
+        </select>
+        <div class="input_err" *ngIf="form.get('city').touched && form.get('city')?.hasError('required')">City is required!</div>
+      </div>
+
+      <div class="input_form-field">
+        <p class="input_label">Start date</p>
+        <input class="input" type="date"
+               formControlName="startDate"
+               placeholder="Please select date" required>
+        <div class="input_err" *ngIf="form.get('startDate').touched && form.get('startDate').hasError('required')">Start date is required!</div>
+
+      </div>
+
+      <div class="input_form-field">
+        <p class="input_label">End date</p>
+        <input class="input" type="date"
+               formControlName="endDate"
+               placeholder="Please select date" required>
+        <div class="input_err" *ngIf="form.get('endDate').touched && form.get('endDate').hasError('required')">End date is required!</div>
+      </div>
+    </form>
+
+
+
+    <div class="popup_footer">
+      <button class="popup_footer-btn" (click)="cancel()">Cancel</button>
+      <button class="popup_footer-btn popup_footer-btn__primary"
+              (click)="submit()"
+      >Save</button>
+    </div>
+  </div>
+</div>
